@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Form Validation </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Validation.css">
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <form action="https://www.google.com/flights/" class="form-horizontal">
+        <h2 class="PI">Personal Information</h2>
+        <div class="form-group has-feedback">
+            <label for="fname" class="col-md-4">First Name:</label>
+            <div class="col-md-12">
+                <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter first name" />
+                <span class="glyphicon form-control-feedback" id="fname1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="lname" class="col-md-4">Last Name</label>
+            <div class="col-md-12">
+                <input type="text" name="lname" id="lname" class="form-control" placeholder="Enter last name" />
+                <span class="glyphicon form-control-feedback" id="lname1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="email" class="col-md-4">Email</label>
+            <div class="col-md-12">
+                <input type="text" name="email" id="email" class="form-control" placeholder="Email" />
+                <span class="glyphicon form-control-feedback" id="email1"></span>
+            </div>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        <!-- <div class="form-group col-md-12">
+            <p>Gender</p>
+            <label class="radio-inline" for="male">Male
+                <input id="male" type="radio" name="gender">
+            </label>
+            <label class="radio-inline" for="female">Female
+                <input id="female" type="radio" name="gender">
+            </label>
+            <label class="radio-inline">Other
+                <input id="other" type="radio" name="gender">
+            </label>
+        </div> -->
+        <div class="form-group">
+            <p class="col-md-4">Gender</p>
+            <label for="male">Male</label>
+            <input id="male" type="radio" name="Gender" value="Male">
+            <span class="glyphicon form-control-feedback" id="male1"></span>
+            <label for="female">Female</label>
+            <input id="female" type="radio" name="Gender" value="Female">
+            <span class="glyphicon form-control-feedback" id="female1"></span>
+            <label>Other</label>
+            <input type="radio" name="Gender" value="Other">
+        </div>
+        <br>
+        <div class="form-group has-feedback">
+            <label for="passport" class="col-md-4">Passport No</label>
+            <div class="col-md-12">
+                <input type="text" name="passport" id="passport" class="form-control" placeholder="Enter passport number" />
+                <span class="glyphicon form-control-feedback" id="passport1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="dob" class="col-md-6">Date and Year of Birth</label>
+            <div class="col-md-12">
+                <input id="dob" name="dob" class="form-control" type="date">
+                <span class="glyphicon form-control-feedback" id="dob1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="addressOne" class="col-md-4">Address line 1</label>
+            <div class="col-md-12">
+                <input type="text" name="addressOne" id="addressOne" class="form-control" />
+                <span class="glyphicon form-control-feedback" id="address1"></span>
+            </div>
+        </div>
+        <!-- <Div>
+        <iframe align="right" width="20%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/78058727&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+        <iframe align="middle" width="360" height="230" src="https://www.youtube.com/embed/ruav0KvQOOg" frameborder="5" allowfullscreen></iframe>
+    </Div> -->
+        <h2 class="PI">Flight Details</h2>
+        <div class="form-group has-feedback">
+            <label class="col-md-4" for="depart">Depart</label>
+            <div class="col-md-12">
+                <input id="depart" name="depart" class="form-control" list="Origin" placeholder="Origin">
+                <datalist id="Origin">
+                    <option value="New York(JFK)" />
+                    <option value="Sanfrancisco(SFO)" />
+                    <option value="Chicago(ORD)" />
+                    <option value="Newark Liberty(EWR)" />
+                </datalist>
+                <span class="glyphicon form-control-feedback" id="depart1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label class="col-md-4" for="arrive">Arrive</label>
+            <div class="col-md-12">
+                <input id="arrive" name="arrive" class="form-control" list="Destination" placeholder="Destination">
+                <span class="glyphicon form-control-feedback" id="arrive1"></span>
+                <datalist id="Destination">
+                    <option value="New York(JFK)" />
+                    <option value="Sanfrancisco(SFO)" />
+                    <option value="Chicago(ORD)" />
+                    <option value="Newark Liberty(EWR)" />
+                </datalist>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label class="col-md-6" for="from">From</label>
+            <div class="col-md-12">
+                <input id="from" name="from" class="form-control" type="date">
+                <span class="glyphicon form-control-feedback" id="from1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label class="col-md-6" for="to">To</label>
+            <div class="col-md-12">
+                <input id="to" name="to" class="form-control" type="date">
+                <span class="glyphicon form-control-feedback" id="to1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label class="col-md-6" for="confirmation">Confirmation Number</label>
+            <div class="col-md-12">
+                <input id="confirmation" name="confirmation" class="form-control" type="text" placeholder="Confirmation">
+                <span class="glyphicon form-control-feedback" id="confirmation1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label class="col-md-4" for="airline">Airline</label>
+            <div class="col-md-12">
+                <input id="airline" name="airline" class="form-control" list="Airline" placeholder="Airline">
+                <span class="glyphicon form-control-feedback" id="airline1"></span>
+                <datalist id="Airline">
+                    <option value="Delta" />
+                    <option value="United" />
+                    <option value="Spirit" />
+                    <option value="Jet Blue" />
+                </datalist>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label class="col-md-4" for="checkin">Checked bags?</label>
+            <input id="checkin" name="checkin" type="checkbox" name="BaggCheck" />
+        </div>
+        <input type="submit" class="btn btn-success col-md-4" value="Check-in">
+        <input type="reset" class="btn btn-secondary col-md-4" Value="Clear">
+    </form>
+    <script type="text/javascript" src="js/vendors/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/vendors/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/custom/validation_js.js"></script>
+</body>
+
+</html>

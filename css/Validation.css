@@ -1,0 +1,49 @@
+body {
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    background-image: url('../images/Airport.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-attachment: scroll;
+    margin-bottom: 200px;
+    margin-top: 100px;
+}
+.form-horizontal {
+    width: 30%;
+    background: #505050;
+    margin: 25px auto;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+.PI {
+    color: rgb(200, 200, 200);
+}
+.FontColor {
+    color: #D0D0D0;
+}
+input[type=submit] {
+    font-family: 'Slabo 27px', serif;
+    padding: 10px;
+    margin: 2px;
+    color: #D0D0D0;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid white;
+    background: #181818;
+}
+input[type=reset] {
+    font-family: 'Slabo 27px', serif;
+    padding: 10px;
+    margin: 2px;
+    color: #D0D0D0;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid white;
+    background: #181818;
+}
+input {
+    border-radius: 5px;
+    padding: 2px;
+    border: 1px groove #181818;
+}

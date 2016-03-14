@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>sdhsdh</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="form-horizontal">
+        <div class="form-group has-feedback">
+            <label for="fname" class="control-label col-md-6">First Name:</label>
+            <div class="col-md-6">
+                <input type="text" name="fname" id="fname" class="form-control" placeholder="Enter first name" />
+                <span class="glyphicon form-control-feedback" id="fname1"></span>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="lname" class="control-label col-md-6">Last Name</label>
+            <div class="col-md-6">
+                <input type="text" name="lname" id="lname" class="form-control" placeholder="Enter last name" />
+                <span class="glyphicon form-control-feedback" id="lname1"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script type="text/javascript" src="js/vendors/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/vendors/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+    $('form').validate({
+        rules: {
+            fname: {
+                minlength: 3,
+                maxlength: 15,
+                required: true
+            },
+            lname: {
+                minlength: 3,
+                maxlength: 15,
+                required: true
+            }
+        },
+        highlight: function(element) {
+            var id_attr = "#" + $(element).attr("id") + "1";
+            $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+            $(id_attr).removeClass('glyphicon-ok').addClass('glyphicon-remove');
+        },
+        unhighlight: function(element) {
+            var id_attr = "#" + $(element).attr("id") + "1";
+            $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+            $(id_attr).removeClass('glyphicon-remove').addClass('glyphicon-ok');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function(error, element) {
+            if (element.length) {
+                error.insertAfter(element);
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>
